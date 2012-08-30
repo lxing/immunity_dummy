@@ -33,17 +33,13 @@ namespace :fezzik do
   remote_task :start do
     puts "starting from #{Fezzik::Util.capture_output { run "readlink #{current_path}" }}"
     run "cd #{current_path} &&
-        if [ -f environment.sh ]; then source environment.sh; fi;
-        ./bin/run_app.sh"
+         if [ -f environment.sh ]; then source environment.sh; fi;
+         ./bin/run_app.sh"
   end
 
   desc "kills the application by searching for the specified process name"
   remote_task :stop do
-    # Replace YOUR_APP_NAME with whatever is run from your bin/run_app.sh file.
-    # If you'd like to do this nicer you can save the PID of your process with `echo $! > app.pid`
-    # in the start task and read the PID to kill here in the stop task.
-    # puts "stopping app"
-    # run "(kill -9 `ps aux | grep 'YOUR_APP_NAME' | grep -v grep | awk '{print $2}'` || true)"
+    #run "(kill -9 `ps aux | grep 'dummy.rb' | grep -v grep | awk '{print $2}'` || true)"
   end
 
   desc "restarts the application"

@@ -9,14 +9,26 @@ class Dummy < Sinatra::Base
   set :port, 8125
 
   @@echo = {}
-  
+
+  get "/" do
+    "echo something!"
+  end
+
   get "/:path" do
-    Hastur.counter("immunity_dummy")
+    Hastur.counter("immunity_dummy.fetch")
+    path = params[:path]
+    if @@echo[path]
+      "#{path}:#{@@echo[path]}"
+    else
+      "not found"
+    end
+  end
+
+  get "/:path/:data" do
     path = params[:path]
     data = params[:data]
-    return @@echo[path] unless data
     @@echo[path] = data
-    "stored #{data} at #{path}"
+    "stored #{path}:#{data}"
   end
 
   run!
