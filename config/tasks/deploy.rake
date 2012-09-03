@@ -39,7 +39,7 @@ namespace :fezzik do
 
   desc "kills the application by searching for the specified process name"
   remote_task :stop do
-    #run "(kill -9 `ps aux | grep 'dummy.rb' | grep -v grep | awk '{print $2}'` || true)"
+    run "(sudo kill -9 `ps aux | grep 'dummy.rb' | grep -v grep | awk '{print $2}'` || true)"
   end
 
   desc "restarts the application"

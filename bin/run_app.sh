@@ -1,1 +1,2 @@
-sudo bundle exec ruby dummy.rb
+source ~/.bash_profile
+bundle exec ruby dummy.rb
