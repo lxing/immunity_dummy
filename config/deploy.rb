@@ -7,7 +7,7 @@ set :local_path, Dir.pwd
 set :user, "root"
 
 Fezzik.destination :staging do
-  set :domain, "lawrence.xing@localhost"
+  set :domain, "localhost"
 end
 
 Fezzik.destination :prod do
