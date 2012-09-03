@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+require "bundler/setup"
 require "json"
 require "rest-client"
 require "sinatra/base"

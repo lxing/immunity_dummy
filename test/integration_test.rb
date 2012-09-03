@@ -1,3 +1,4 @@
+require "minitest/autorun"
 require "scope"
 
 class ImmunityDummyIntegrationTest < Scope::TestCase
