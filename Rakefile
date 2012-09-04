@@ -1,2 +1,2 @@
 require "fezzik"
-require "config/deploy"
+require "./config/deploy"
