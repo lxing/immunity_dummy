@@ -1,1 +1,2 @@
-sudo bundle exec ruby test/integration_test.rb
+touch /tmp/tester
+bundle exec ruby test/integration_test.rb
