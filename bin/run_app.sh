@@ -1,2 +1,2 @@
 source ~/.bash_profile
-bundle exec ruby dummy.rb&
+bundle exec rackup --port 8125 config.ru
