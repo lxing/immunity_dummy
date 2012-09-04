@@ -55,4 +55,9 @@ namespace :fezzik do
     Rake::Task["fezzik:restart"].invoke
     puts "#{app} deployed!"
   end
+
+  desc "test"
+  remote_task :test do
+    run "cd #{current_path} && ./bin/run_tests.sh"
+  end
 end
