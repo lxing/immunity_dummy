@@ -34,7 +34,7 @@ namespace :fezzik do
     puts "starting from #{Fezzik::Util.capture_output { run "readlink #{current_path}" }}"
     run "cd #{current_path} &&
          if [ -f environment.sh ]; then source environment.sh; fi;
-         ./bin/run_app.sh"
+         nohup ./bin/run_app.sh&"
   end
 
   desc "kills the application by searching for the specified process name"
